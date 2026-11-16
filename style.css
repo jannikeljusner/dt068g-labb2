@@ -1,6 +1,8 @@
 /* Sätt typsnittet på hela sidan */
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -13,8 +15,12 @@ html {
   font-size: 100%;
 }
 
+header p {
+text-align: center;
+}
 h1 {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 h2 {
@@ -42,6 +48,35 @@ img {
     object-fit: cover;
 }
 
+.blockquote {
+  text-align: center;
+  max-width: 600px; 
+  font-style: italic; 
+  font-size: 1.1rem; 
+  }
+
+.portratt {
+  width: 150px; 
+  object-fit: cover; 
+  border-radius: 50%; 
+  display: block;
+  margin: 0 auto; 
+}
+
 @media (min-width: 1024px) {
   .hero-bild {
     height: 500px;
+
+    .flex-rad {
+    display: flex;
+    align-items: center; 
+    gap: 2rem; /
+  }
+  
+  /* Ser till att bilden och texten tar upp exakt halva ytan var */
+  .flex-rad img, 
+  .flex-rad p {
+    flex: 1; 
+    margin-bottom: 0; 
+  }
+}
