@@ -1,23 +1,30 @@
-/* Sätt typsnittet på hela sidan */
-body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
+/* =========================================
+   1. GRUNDINSTÄLLNINGAR & TYPOGRAFI
+   ========================================= */
 html {
   font-size: 100%;
 }
 
-header p {
-text-align: center;
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #ffffff;
 }
+
+/* =========================================
+   2. STRUKTUR & LAYOUT
+   ========================================= */
+main {
+  max-width: 800px; /* Begränsar radlängden för läsbarhet */
+  margin: 0 auto; /* Centrerar huvudinnehållet på skärmen */
+  padding: 1rem;
+}
+
+/* =========================================
+   3. TEXT & RUBRIKER
+   ========================================= */
 h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -33,50 +40,68 @@ h3 {
 
 p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.5; /* Lämpligt radavstånd */
 }
 
+header p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* =========================================
+   4. BILDER & MEDIA
+   ========================================= */
 img {
-  max-width: 100%;
+  max-width: 100%; /* Gör alla bilder responsiva */
   height: auto;
   margin-bottom: 1.5rem;
 }
 
 .hero-bild {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
-
-.blockquote {
-  text-align: center;
-  max-width: 600px; 
-  font-style: italic; 
-  font-size: 1.1rem; 
-  }
 
 .portratt {
-  width: 150px; 
-  object-fit: cover; 
-  border-radius: 50%; 
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
+/* =========================================
+   5. CITAT (BLOCKQUOTE)
+   ========================================= */
+blockquote {
+  text-align: center;
+  max-width: 600px;
+  margin: 3rem auto;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   6. RESPONSIVITET (MEDIA QUERIES)
+   ========================================= */
 @media (min-width: 1024px) {
   .hero-bild {
     height: 500px;
-
-    .flex-rad {
-    display: flex;
-    align-items: center; 
-    gap: 2rem; /
   }
-  
-  /* Ser till att bilden och texten tar upp exakt halva ytan var */
-  .flex-rad img, 
+
+  .flex-rad {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .flex-rad img,
   .flex-rad p {
-    flex: 1; 
-    margin-bottom: 0; 
+    flex: 1;
+    margin-bottom: 0;
   }
 }
